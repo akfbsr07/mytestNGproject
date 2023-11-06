@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Method Suite" verbose="1" >
+    <test name="Running methods"   >
+        <classes>
+            <class name="myapp.tests.dataprovider.Day16_DataProvider1">
+                <methods>
+                    <include name="excelEmployeeDataTest"/> <!-- run just this method in the class -->
+                </methods>
+            </class>
+            <class name="myapp.tests.topics.Day13_SoftAssertion">
+                <methods>
+                    <include name="javaAssert"/>
+                </methods>
+            </class>
+            <class name="myapp.tests.excelautomation.Day16_ExcelTest">
+                <methods>
+                    <exclude name="userCreationWithExcel"></exclude> <!-- run every other methods in the class except this-->
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
